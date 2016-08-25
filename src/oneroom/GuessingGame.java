@@ -23,8 +23,25 @@ public class GuessingGame {
         System.out.println("5. Make my guess.");
     }
     
-    String getUserChoice(Scanner s){ //grabs user's input
-        return s.next();
+    int getUserChoice(Scanner s){ //grabs user's input
+        int userChoice;
+        boolean loop = true; //used for error-checking loop
+        while(loop){
+          try{ //error checking to make sure player enters int
+             userChoice = s.nextInt();
+                       }
+          catch(Exception e){
+              System.out.println("Please choose a valid option.");
+          }
+          if(userChoice < 1 || userChoice > 5){
+            System.out.println("Please choose a valid option.");
+            
+        }
+          else{
+              loop =false;
+          }
+        }
+        return userChoice;
     }
     
     void giveUserClue(int userChoice){ //prints the clue based on the user's choice
@@ -43,6 +60,7 @@ public class GuessingGame {
         while(true){
             presentOptions();
             userChoiceString = getUserChoice(scanner);
+            
         }
         
         
