@@ -11,18 +11,22 @@ package oneroom;
  */
 public class Room {
     //these are the clues which the user can use to aid in their guess
-    private int roomName;
-    private int floorArea; //floorspace
-    private int storyNumber; //which story the room is on
-    private int numberOfWindows;
-    private int numberOfDoors;
+    private String roomName;
 
-    public Room(int floorArea, int storyNumber, int numberOfWindows, int numberOfDoors) {
-        this.floorArea = floorArea;
+    public Room(String roomName, int storyNumber, String stuffInTheRoom, int numberOfWindows, int numberOfDoors) {
+        this.roomName = roomName;
         this.storyNumber = storyNumber;
+        this.stuffInTheRoom = stuffInTheRoom;
         this.numberOfWindows = numberOfWindows;
         this.numberOfDoors = numberOfDoors;
     }
+    
+    private int storyNumber; //which story the room is on
+    private String stuffInTheRoom;
+    private int numberOfWindows;
+    private int numberOfDoors;
+
+    
 
     public int getNumberOfDoors() {
         return numberOfDoors;
@@ -32,21 +36,15 @@ public class Room {
         this.numberOfDoors = numberOfDoors;
     }
 
-    public int getRoomName() {
+    public String getRoomName() {
         return roomName;
     }
 
-    public void setRoomName(int roomName) {
+    public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
 
-    public int getFloorArea() {
-        return floorArea;
-    }
-
-    public void setFloorArea(int floorArea) {
-        this.floorArea = floorArea;
-    }
+   
 
     public int getStoryNumber() {
         return storyNumber;
@@ -62,6 +60,14 @@ public class Room {
 
     public void setNumberOfWindows(int numberOfWindows) {
         this.numberOfWindows = numberOfWindows;
+    }
+
+    public String getStuffInTheRoom() {
+        return stuffInTheRoom;
+    }
+
+    public void setStuffInTheRoom(String stuffInTheRoom) {
+        this.stuffInTheRoom = stuffInTheRoom;
     }
     
 }
