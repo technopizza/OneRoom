@@ -14,8 +14,12 @@ public class OneRoom {
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        // creation of an instance of the GuessingGame class and subsequent running of the game method
+        GuessingGame guessingGame = new GuessingGame();
+        guessingGame.runGame();
     }
     
 }

@@ -9,10 +9,15 @@ package oneroom;
  *
  * @author jconklin2391
  */
-public class Room {
+public class Room { //class from which to create room objects
     //these are the clues which the user can use to aid in their guess
     private String roomName;
+    private int storyNumber; //which story the room is on
+    private String stuffInTheRoom; //one word string that gives player info about the room
+    private int numberOfWindows;
+    private int numberOfDoors;
 
+    //constructor
     public Room(String roomName, int storyNumber, String stuffInTheRoom, int numberOfWindows, int numberOfDoors) {
         this.roomName = roomName;
         this.storyNumber = storyNumber;
@@ -21,10 +26,7 @@ public class Room {
         this.numberOfDoors = numberOfDoors;
     }
     
-    private int storyNumber; //which story the room is on
-    private String stuffInTheRoom;
-    private int numberOfWindows;
-    private int numberOfDoors;
+    
 
     
 
